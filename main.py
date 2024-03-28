@@ -4,7 +4,7 @@ import random
 import discord
 from discord.utils import get
 from yt_dlp import YoutubeDL
-
+from dotenv import load_dotenv
 
 class MyClient(discord.Client):
 
@@ -134,7 +134,7 @@ class MyClient(discord.Client):
 
 
 globalQueue = {}
-
+load_dotenv()
 token = os.getenv('TOKEN')
 
 prefix = '.' if os.getenv('TEST') == '1' else '!'
